@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/mamagam/Documents/CPP/07_aritmatika",
-      "program": "/home/mamagam/Documents/CPP/07_aritmatika/build/Debug/outDebug",
+      "cwd": "/home/mamagam/Documents/CPP/03_printing",
+      "program": "/home/mamagam/Documents/CPP/03_printing/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

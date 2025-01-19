@@ -1,8 +1,6 @@
 #include <iostream>
 
-using namespace std;
-
 int main(){
-    cout << "Print Pertama\n";
+    std::cout << "Print Pertama" << std::endl;
     return 0;
 }
