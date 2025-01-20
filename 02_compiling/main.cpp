@@ -1,8 +1,6 @@
 #include <iostream>
 
-using namespace std;
-
 int main(){
-    cout << "Kamu siapa?" << endl;
+    std::cout << "Kamu siapa?" << std::endl;
     return 0;
 }

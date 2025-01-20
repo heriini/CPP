@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int main(){
 
@@ -7,6 +6,6 @@ int main(){
     int b = 2;
     int hasil = a + b;
 
-    cout << "hasil dari a + b = "; cout << hasil << endl;
+    std::cout << "hasil dari a + b = "; std::cout << hasil << std::endl;
     return 0;
 }
