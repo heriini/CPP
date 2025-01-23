@@ -1,7 +1,8 @@
 /*** Pointer 
  * 
- * Menyalin alamat momori dari sumbernya
- * 
+ * Menyalin alamat momori dari sumbernya (alias)
+ * (&) untuk mengambil alamat
+ * (*) untuk menggunakan pointer
  */
 
 #include <iostream>
