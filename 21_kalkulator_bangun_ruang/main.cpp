@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 // Prototype fungsi
 void header(void);
@@ -10,9 +9,13 @@ double luas_persegi_panjang(double p, double l);
 double luas_persegi(double s);
 double luas_segitiga(double a, double t);
 double luas_lingkaran(double r);
+double luas_jajar_genjang(double a, double t);
+double luas_trapesium(double s1, double s2, double t);
+double luas_belah_ketupat(double d1, double d2);
+double luas_layang_layang(double p, double q);
 
 // Varibel input 
-double a, b, hasil;
+double a, b, c, hasil;
 int jenis_bangun;
 char konfirmasi;
 
@@ -26,18 +29,17 @@ int main(){
     proses_hitung();
     hitung_lagi();
     
-
-        while(konfirmasi == 'y'){
-            opsi();
-            proses_hitung();
-            hitung_lagi();
-            if(konfirmasi == 'n'){
-                std::cout << "\nOkey, Terimakasih..." << std::endl;
-            }
-        } 
+    while(konfirmasi == 'y'){
+        opsi();
+        proses_hitung();
+        hitung_lagi();
         if(konfirmasi == 'n'){
             std::cout << "\nOkey, Terimakasih..." << std::endl;
         }
+    } 
+    if(konfirmasi == 'n'){
+        std::cout << "\nOkey, Terimakasih..." << std::endl;
+    }
 
     return 0;   
 }
@@ -82,6 +84,34 @@ double luas_lingkaran(double r){
     return luas;
 }
 
+// Hitung luas jajar genjang
+double luas_jajar_genjang(double a, double t){
+    double luas;
+    luas = a*t;
+    return luas;
+}
+
+// Hitung luas trapesium
+double luas_trapesium(double s1, double s2, double t){
+    double luas;
+    luas = (s1+s2)*t/2;
+    return luas;
+}
+
+// Hitung luas belah ketupat
+double luas_belah_ketupat(double d1, double d2){
+    double luas;
+    luas = d1*d2/2;
+    return luas;
+}
+
+// Hitung luas layang-layang
+double luas_layang_layang(double p, double q){
+    double luas;
+    luas = p*q/2;
+    return luas;
+}
+
 // Perhitungan Utama
 void proses_hitung(void){
     if(jenis_bangun == 1){
@@ -91,14 +121,14 @@ void proses_hitung(void){
         std::cout << "Lebar : ";
         std::cin >> b;
         hasil = luas_persegi_panjang(a,b);
-        std::cout << "Luas persegi panjang : " << hasil << std::endl;
+        std::cout << "Luas persegi panjang : " << hasil << " cm²" << std::endl;
     }
     else if(jenis_bangun == 2){
         std::cout << "\n*Persegi*" << std::endl;
         std::cout << "sisi : ";
         std::cin >> a;
         hasil =  luas_persegi(a);
-        std::cout << "Luas persegi : " << hasil << std::endl;
+        std::cout << "Luas persegi : " << hasil << " cm²" << std::endl;
     }
     else if(jenis_bangun == 3){
         std::cout << "\n*Segitiga*" << std::endl;
@@ -107,15 +137,54 @@ void proses_hitung(void){
         std::cout << "Tinggi : ";
         std::cin >> b;
         hasil = luas_segitiga(a,b);
-        std::cout << "Luas segitiga : " << hasil << std::endl;
+        std::cout << "Luas segitiga : " << hasil << " cm²" << std::endl;
     }
     else if(jenis_bangun == 4){
         std::cout << "\n*Lingkaran*" << std::endl;
         std::cout << "Jari-jari : ";
         std::cin >> a;
         hasil = luas_lingkaran(a);
-        std::cout << "Luas lingkaran : " << hasil << std::endl;
+        std::cout << "Luas lingkaran : " << hasil << " cm²"<< std::endl;
     }
+    else if(jenis_bangun == 5){
+        std::cout << "\n*Jajar Genjang*" << std::endl;
+        std::cout << "Alas : ";
+        std::cin >> a;
+        std::cout << "Tinggi : ";
+        std::cin >> b;
+        hasil = luas_jajar_genjang(a,b);
+        std::cout << "Luas jajar genjang : " << hasil << " cm²" << std::endl;
+    }
+    else if(jenis_bangun == 6){
+        std::cout << "\n*Trapesium*" << std::endl;
+        std::cout << "Sisi 1 : ";
+        std::cin >> a;
+        std::cout << "Sisi 2 : ";
+        std::cin >> b;
+        std::cout << "Tinggi : ";
+        std::cin >> c;
+        hasil = luas_trapesium(a,b,c);
+        std::cout << "Luas trapesium : " << hasil << " cm²" << std::endl;
+    }
+    else if(jenis_bangun == 7){
+        std::cout << "\n*Belah Ketupat*" << std::endl;
+        std::cout << "Diagonal 1 : ";
+        std::cin >> a;
+        std::cout << "Diagonal 2 : ";
+        std::cin >> b;
+        hasil = luas_belah_ketupat(a,b);
+        std::cout << "Luas belah ketupat : " << hasil << " cm²"<< std::endl;
+    }
+    else if(jenis_bangun == 8){
+        std::cout << "\n*Layang-Layang*" << std::endl;
+        std::cout << "Diagonal p : ";
+        std::cin >> a;
+        std::cout << "Diagonal q : ";
+        std::cin >> b;
+        hasil = luas_layang_layang(a,b);
+        std::cout << "Luas belah layang-layang : " << hasil << " cm²"<< std::endl;
+    }
+
 }
 
 // Konfirmasi hitung lagi
