@@ -10,6 +10,7 @@ int main(){
 
     std::cout << std::endl;
 
+    // manipulasi nilai array
     for(int &iref : nilai){
         iref *= 2;
 
