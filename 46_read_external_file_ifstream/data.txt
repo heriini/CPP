@@ -1,0 +1,14 @@
+Daftar Nama Penerima Bantuan.
+Berikut adalah daftar penerimanya :
+
+data
+No  Nama
+1   Andi 
+2   Anwar 
+3   Bagus
+4   Cindi
+5   Dodi
+6   Endang
+7   Fulana
+8   Gigih
+9   HutangPea
