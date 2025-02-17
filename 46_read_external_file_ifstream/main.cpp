@@ -23,12 +23,16 @@ int main(){
     std::cout << output << std::endl;
 
     std::getline(myFile,buffer);
+    std::cout << buffer << std::endl;
+    int jumlah_data = 0;
     while (!myFile.eof()){
         myFile >> no;
         myFile >> nama;
 
-        std::cout << no << " " << nama << std::endl;
+        std::cout << no << "   " << nama << std::endl;
+        jumlah_data++;
     }
+    std::cout << "Jumlah data = " << jumlah_data << std::endl;
     
     return 0;
 }
